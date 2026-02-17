@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    char team[50];
+    int tries, conversions, penalties, drop_goals;
+    int total_score;
+
+    printf("Enter Team Name: ");
+    scanf("%s", team);
+
+    printf("Enter number of Tries (5 points each): ");
+    scanf("%d", &tries);
+
+    printf("Enter number of Conversions (2 points each): ");
+    scanf("%d", &conversions);
+
+    printf("Enter number of Penalty Goals (3 points each): ");
+    scanf("%d", &penalties);
+
+    printf("Enter number of Drop Goals (3 points each): ");
+    scanf("%d", &drop_goals);
+
+    // Calculate total score
+    total_score = (tries * 5) + (conversions * 2) + 
+                  (penalties * 3) + (drop_goals * 3);
+
+    printf("\n--- Rugby Match Summary ---\n");
+    printf("Team: %s\n", team);
+    printf("Total Score: %d\n", total_score);
+
+    return 0;
+}
