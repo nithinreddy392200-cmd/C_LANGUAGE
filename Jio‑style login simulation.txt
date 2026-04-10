@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char username[30];
+    char password[20];
+    char correct_user[] = "jiohoster";
+    char correct_pass[] = "jio123";
+
+    printf("\n=== Jio Hoster Login ===\n\n");
+
+    printf("Enter username: ");
+    scanf("%s", username);
+
+    printf("Enter password: ");
+    scanf("%s", password);
+
+    // Check login
+    if (strcmp(username, correct_user) == 0 && strcmp(password, correct_pass) == 0) {
+        printf("\nLogin successful! Welcome to Jio Hoster.\n\n");
+    } else {
+        printf("\nLogin failed! Invalid username or password.\n\n");
+    }
+
+    return 0;
+}
